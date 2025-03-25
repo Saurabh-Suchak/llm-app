@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_launcher_foreground"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:text="Android LLM App"
+            android:textStyle="bold"
+            android:background="#FFD700"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"/>
+
+        <RadioGroup
+            android:id="@+id/modelSelector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbAnthropic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Anthropic"/>
+
+            <RadioButton
+                android:id="@+id/rbOpenAI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Open AI"
+                android:checked="true"
+                android:buttonTint="#00FF00"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Prompt:" />
+
+        <EditText
+            android:id="@+id/etPrompt"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="top"
+            android:background="@android:drawable/edit_text"
+            android:hint="Enter your question here"
+            android:inputType="textMultiLine"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnSend"
+                android:text="Send"
+                android:layout_weight="1"
+                android:background="#4CAF50"
+                android:textColor="#fff"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:text="Cancel"
+                android:layout_weight="1"
+                android:background="#FF5722"
+                android:textColor="#fff"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Response:" />
+
+        <TextView
+            android:id="@+id/tvResponse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D0E9F5"
+            android:padding="10dp"/>
+    </LinearLayout>
+</ScrollView>
